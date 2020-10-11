@@ -24,7 +24,6 @@
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
-        <script src="js/multi-style-layer.js"></script>
         <script src="js/leaflet.rotatedMarker.js"></script>
         <script src="js/leaflet.pattern.js"></script>
         <script src="js/leaflet-hash.js"></script>
@@ -112,48 +111,32 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        var pattern_Macro_Japi_Cristais_2_0 = new L.StripePattern({
-            weight: 0.3,
-            spaceWeight: 2.0,
-            color: '#000000',
-            opacity: 1.0,
-            spaceOpacity: 0,
-            angle: 225
-        });
-        pattern_Macro_Japi_Cristais_2_0.addTo(map);
         function style_Macro_Japi_Cristais_2_0() {
             return {
                 pane: 'pane_Macro_Japi_Cristais_2',
-                stroke: false,
-                fillOpacity: 1,
-                fillPattern: pattern_Macro_Japi_Cristais_2_0,
-                interactive: true,
-            }
-        }
-        function style_Macro_Japi_Cristais_2_1() {
-            return {
-                pane: 'pane_Macro_Japi_Cristais_2',
                 opacity: 1,
-                color: 'rgba(0,0,0,1.0)',
+                color: 'rgba(31,78,31,1.0)',
                 dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 2.0,
-                fillOpacity: 0,
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(120,200,135,0.4235294117647059)',
                 interactive: true,
             }
         }
         map.createPane('pane_Macro_Japi_Cristais_2');
         map.getPane('pane_Macro_Japi_Cristais_2').style.zIndex = 402;
         map.getPane('pane_Macro_Japi_Cristais_2').style['mix-blend-mode'] = 'normal';
-        var layer_Macro_Japi_Cristais_2 = new L.geoJson.multiStyle(json_Macro_Japi_Cristais_2, {
+        var layer_Macro_Japi_Cristais_2 = new L.geoJson(json_Macro_Japi_Cristais_2, {
             attribution: '',
             interactive: true,
             dataVar: 'json_Macro_Japi_Cristais_2',
             layerName: 'layer_Macro_Japi_Cristais_2',
             pane: 'pane_Macro_Japi_Cristais_2',
             onEachFeature: pop_Macro_Japi_Cristais_2,
-            styles: [style_Macro_Japi_Cristais_2_0,style_Macro_Japi_Cristais_2_1,]
+            style: style_Macro_Japi_Cristais_2_0,
         });
         bounds_group.addLayer(layer_Macro_Japi_Cristais_2);
         map.addLayer(layer_Macro_Japi_Cristais_2);
@@ -169,33 +152,29 @@
         function style_Macro_Urbana_Oeste_3_0() {
             return {
                 pane: 'pane_Macro_Urbana_Oeste_3',
-                interactive: true,
-            }
-        }
-        function style_Macro_Urbana_Oeste_3_1() {
-            return {
-                pane: 'pane_Macro_Urbana_Oeste_3',
                 opacity: 1,
-                color: 'rgba(0,0,0,1.0)',
+                color: 'rgba(137,135,27,1.0)',
                 dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 1.0,
-                fillOpacity: 0,
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(204,204,73,0.38823529411764707)',
                 interactive: true,
             }
         }
         map.createPane('pane_Macro_Urbana_Oeste_3');
         map.getPane('pane_Macro_Urbana_Oeste_3').style.zIndex = 403;
         map.getPane('pane_Macro_Urbana_Oeste_3').style['mix-blend-mode'] = 'normal';
-        var layer_Macro_Urbana_Oeste_3 = new L.geoJson.multiStyle(json_Macro_Urbana_Oeste_3, {
+        var layer_Macro_Urbana_Oeste_3 = new L.geoJson(json_Macro_Urbana_Oeste_3, {
             attribution: '',
             interactive: true,
             dataVar: 'json_Macro_Urbana_Oeste_3',
             layerName: 'layer_Macro_Urbana_Oeste_3',
             pane: 'pane_Macro_Urbana_Oeste_3',
             onEachFeature: pop_Macro_Urbana_Oeste_3,
-            styles: [style_Macro_Urbana_Oeste_3_0,style_Macro_Urbana_Oeste_3_1,]
+            style: style_Macro_Urbana_Oeste_3_0,
         });
         bounds_group.addLayer(layer_Macro_Urbana_Oeste_3);
         map.addLayer(layer_Macro_Urbana_Oeste_3);
@@ -208,66 +187,32 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        var pattern_Macro_Urbana_Centro_4_0 = new L.StripePattern({
-            weight: 0.3,
-            spaceWeight: 2.0,
-            color: '#bdd822',
-            opacity: 1.0,
-            spaceOpacity: 0,
-            angle: 315
-        });
-        pattern_Macro_Urbana_Centro_4_0.addTo(map);
         function style_Macro_Urbana_Centro_4_0() {
             return {
                 pane: 'pane_Macro_Urbana_Centro_4',
-                stroke: false,
-                fillOpacity: 1,
-                fillPattern: pattern_Macro_Urbana_Centro_4_0,
-                interactive: true,
-            }
-        }
-        var pattern_Macro_Urbana_Centro_4_1 = new L.StripePattern({
-            weight: 0.3,
-            spaceWeight: 2.0,
-            color: '#bdd822',
-            opacity: 1.0,
-            spaceOpacity: 0,
-            angle: 225
-        });
-        pattern_Macro_Urbana_Centro_4_1.addTo(map);
-        function style_Macro_Urbana_Centro_4_1() {
-            return {
-                pane: 'pane_Macro_Urbana_Centro_4',
-                stroke: false,
-                fillOpacity: 1,
-                fillPattern: pattern_Macro_Urbana_Centro_4_1,
-                interactive: true,
-            }
-        }
-        function style_Macro_Urbana_Centro_4_2() {
-            return {
-                pane: 'pane_Macro_Urbana_Centro_4',
                 opacity: 1,
-                color: 'rgba(189,216,34,1.0)',
+                color: 'rgba(120,39,85,1.0)',
                 dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 2.0,
-                fillOpacity: 0,
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(204,110,160,0.43529411764705883)',
                 interactive: true,
             }
         }
         map.createPane('pane_Macro_Urbana_Centro_4');
         map.getPane('pane_Macro_Urbana_Centro_4').style.zIndex = 404;
         map.getPane('pane_Macro_Urbana_Centro_4').style['mix-blend-mode'] = 'normal';
-        var layer_Macro_Urbana_Centro_4 = new L.geoJson.multiStyle(json_Macro_Urbana_Centro_4, {
+        var layer_Macro_Urbana_Centro_4 = new L.geoJson(json_Macro_Urbana_Centro_4, {
             attribution: '',
             interactive: true,
             dataVar: 'json_Macro_Urbana_Centro_4',
             layerName: 'layer_Macro_Urbana_Centro_4',
             pane: 'pane_Macro_Urbana_Centro_4',
             onEachFeature: pop_Macro_Urbana_Centro_4,
-            styles: [style_Macro_Urbana_Centro_4_0,style_Macro_Urbana_Centro_4_1,style_Macro_Urbana_Centro_4_2,]
+            style: style_Macro_Urbana_Centro_4_0,
         });
         bounds_group.addLayer(layer_Macro_Urbana_Centro_4);
         map.addLayer(layer_Macro_Urbana_Centro_4);
@@ -280,48 +225,32 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        var pattern_Macro_Rural_Mananciais_5_0 = new L.StripePattern({
-            weight: 0.3,
-            spaceWeight: 2.0,
-            color: '#e00000',
-            opacity: 1.0,
-            spaceOpacity: 0,
-            angle: 360
-        });
-        pattern_Macro_Rural_Mananciais_5_0.addTo(map);
         function style_Macro_Rural_Mananciais_5_0() {
             return {
                 pane: 'pane_Macro_Rural_Mananciais_5',
-                stroke: false,
-                fillOpacity: 1,
-                fillPattern: pattern_Macro_Rural_Mananciais_5_0,
-                interactive: true,
-            }
-        }
-        function style_Macro_Rural_Mananciais_5_1() {
-            return {
-                pane: 'pane_Macro_Rural_Mananciais_5',
                 opacity: 1,
-                color: 'rgba(224,0,0,1.0)',
+                color: 'rgba(17,17,161,1.0)',
                 dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 2.0,
-                fillOpacity: 0,
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 3.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(73,93,220,0.2823529411764706)',
                 interactive: true,
             }
         }
         map.createPane('pane_Macro_Rural_Mananciais_5');
         map.getPane('pane_Macro_Rural_Mananciais_5').style.zIndex = 405;
         map.getPane('pane_Macro_Rural_Mananciais_5').style['mix-blend-mode'] = 'normal';
-        var layer_Macro_Rural_Mananciais_5 = new L.geoJson.multiStyle(json_Macro_Rural_Mananciais_5, {
+        var layer_Macro_Rural_Mananciais_5 = new L.geoJson(json_Macro_Rural_Mananciais_5, {
             attribution: '',
             interactive: true,
             dataVar: 'json_Macro_Rural_Mananciais_5',
             layerName: 'layer_Macro_Rural_Mananciais_5',
             pane: 'pane_Macro_Rural_Mananciais_5',
             onEachFeature: pop_Macro_Rural_Mananciais_5,
-            styles: [style_Macro_Rural_Mananciais_5_0,style_Macro_Rural_Mananciais_5_1,]
+            style: style_Macro_Rural_Mananciais_5_0,
         });
         bounds_group.addLayer(layer_Macro_Rural_Mananciais_5);
         map.addLayer(layer_Macro_Rural_Mananciais_5);
