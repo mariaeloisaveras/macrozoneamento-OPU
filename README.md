@@ -1,5 +1,5 @@
-# https://mariaeloisaveras.github.io/macrozoneamento-OPU/
-Atividade: Macrozoneamento e zoneamento do município de Jundiaí
+# https://mariaeloisaveras.github.io/usosolo-OPU/
+Atividade: Mapa interativo de uso do solo do município de Jundiaí
 
 Disciplina: Oficina de Planejamento Urbano - 2020
 
